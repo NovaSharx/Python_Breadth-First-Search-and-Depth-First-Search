@@ -68,22 +68,31 @@ def max_values_each_level_BFS():
 def recursive_print_inorder_DFS(root):
 
     if root:
+        # First recur on left nodes
         recursive_print_inorder_DFS(root.left)
+        # Then print the node data
         print(root.data)
+        # Finally recur on the right nodes
         recursive_print_inorder_DFS(root.right)
 
 def recursive_print_preorder_DFS(root):
 
     if root:
+        # First print the node data
         print(root.data)
+        # Then recur on the left nodes
         recursive_print_preorder_DFS(root.left)
+        # Finally recur on the right nodes
         recursive_print_preorder_DFS(root.right)
 
 def recursive_print_postorder_DFS(root):
 
     if root:
+        # First recur on the left nodes
         recursive_print_postorder_DFS(root.left)
+        # Then recur on the right nodes
         recursive_print_postorder_DFS(root.right)
+        # Finally print the node data
         print(root.data)
 
 
